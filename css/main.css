@@ -14,22 +14,23 @@ main {
 
 .container {
   margin: auto;
-  max-width: 70vw;
+  max-width: 1200px;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  grid-gap: 2vw;
+  grid-gap: 10px;
 }
 
 .card-outer {
-  height: 45vh;
-  width: 20vw;
+  height: 48vh;
+  width: 400px;
   background-color: var(--i);
   position: relative;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .card-icon {
@@ -64,12 +65,27 @@ main {
 .card-content {
   text-align: center;
   padding: 20px;
-  margin-top: 15vh;
-  opacity: 0;
+  margin-top: calc(10vh + 80px);
   color: #fff;
+  transform: scale(0);
 }
 
 .card-outer:hover .card-content {
   transition: 0.5s 0.2s;
-  opacity: 1;
+  transform: scale(1);
+}
+
+@media only screen and (max-width: 1024px) {
+  main {
+    height: auto;
+    padding: 20px 20px;
+  }
+
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .container .card-outer {
+    width: 100%;
+  }
 }
