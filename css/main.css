@@ -16,7 +16,8 @@ main {
   margin: auto;
   max-width: 70vw;
   height: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -28,4 +29,47 @@ main {
   width: 20vw;
   background-color: var(--i);
   position: relative;
+  border-radius: 10px;
+}
+
+.card-icon {
+  z-index: 2;
+  color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 5rem;
+  display: grid;
+  place-content: center;
+  transition: 0.5s;
+}
+
+.card-outer:hover .card-icon {
+  color: #000000;
+  height: 80px;
+  width: 80px;
+  top: 5vh;
+  left: calc(50% - 40px);
+  background: #fff;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.card-outer:hover ion-icon {
+  font-size: 70px;
+}
+
+.card-content {
+  text-align: center;
+  padding: 20px;
+  margin-top: 15vh;
+  opacity: 0;
+  color: #fff;
+}
+
+.card-outer:hover .card-content {
+  transition: 0.5s 0.2s;
+  opacity: 1;
 }
