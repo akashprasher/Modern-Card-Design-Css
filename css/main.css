@@ -13,6 +13,31 @@ main {
   padding: 1rem;
 }
 
+.warning {
+  position: absolute;
+  background: #dedede;
+  z-index: 3;
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+  border-radius: 10px;
+  text-align: center;
+  bottom: 0;
+}
+
+.warning p {
+  padding: 1em;
+}
+
+.brdr-1 {
+  transition: ease-in-out 4s;
+  opacity: 0;
+}
+
+/* .brdr-2 {
+  transition: ease-in-out 4s;
+  transform: scale(0);
+} */
+
 .container {
   margin: auto;
   max-width: 1200px;
